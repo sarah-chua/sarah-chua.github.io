@@ -8,91 +8,56 @@ p {
 }
 
 body {
-    background-image: url('../assets/background.jpeg');
+    font-family: 'Major Mono Display', monospace;
+    background-image: url('../assets/background.jpeg'); /* fallback background */
     background-attachment: fixed;
     background-size: 100% 100%;
-    font-family: 'Major Mono Display', monospace;
 }
 
-.box {
-    /* Center items in div */
-    display: flex;
-    align-items: center;
-    
-    /* Center div on page */
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
+section {
+    display: block;
+}
 
-    /* others */
+.small-box {
+    /* display: none; */
+
     width: 60%;
-    height: 30vw;
     border-radius: 25px;
     background-color: white;
-}
-
-.text {
-    width: 50%;
-    padding: 2em;
-    text-align: left;
-}
-
-.pic {
-    width: 50%;
-    display: grid;
-    justify-items: center;
-    padding: 2em;
-}
-
-#profile {
-    border-radius: 50%;
-    width: 80%;
-}
-
-@media screen and (max-width: 920px) {
-    h1 {
-        font-size: 3vh;
-    }
     
-    p {
-        font-size: 1.8vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+canvas {
+    position: relative;
+    z-index: -3 !important;
+}
+
+#container {
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+@media screen and (max-width:768px) {
+
+    .small-box {
+        display: block;
     }
-    
-    .box {
-        flex-direction: column;
-        width: 80%;
-        height: 70%;
+
+    .row {
         text-align: center;
-        justify-content: center; /* centers items vertically */
     }
 
-    .text {
-        display: inline-block;
-        text-align: center;
-        padding: 0em 2em 2em 2em;
-    }
-    
-    .pic {
-        display: inline-block;
-        width: auto;
-        justify-content: center;
-        padding: 2em 2em 0em 2em;
+    .col-md-4,
+    .col-md-8 {
+        padding: 10px 0;
     }
 
-    #profile {
-        width: 50%;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .box {
-        height: 60%;
-    }
-
-    #profile {
-        width: 60%;
+    .box-big {
+        display: none;
     }
 }

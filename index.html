@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,35 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Sen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css">
   <link rel="icon" href="./assets/logo.png" type="image/x-icon">
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="box">
-    <div class="pic">
-      <img id="profile" src="./assets/profile.jpg">
-    </div>
-    <div class="text">
-      <h1>Sarah Chua</h1>
-      <p>
-        Hello there! i am a surviving computer science student, interested in the applications of tech and design to enhance learning and education.
-      </p>
+  
+  <div class="container small-box align-items-center">
+    <div class="row p-4">
+      <div class="pic col-md-4">
+        <img id="profile" src="./assets/profile.jpg" style="width:80%; border-radius:50%">
+      </div>
+      <div class="text col-md-8 my-auto">
+        <h1>Sarah Chua</h1>
+        <p>
+          Hello there! i am a surviving computer science student, interested in the applications of tech and design to
+          enhance learning and education.
+        </p>
+      </div>
     </div>
   </div>
+  <section id='big-section' class="big-box">
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.2/p5.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+    crossorigin="anonymous"></script>
+  <script src='index.js'></script>
 </body>
+
 </html>
