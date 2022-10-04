@@ -9,17 +9,21 @@ p {
 
 body {
     font-family: 'Major Mono Display', monospace;
-    background-image: url('../assets/background.jpeg'); /* fallback background */
+    background-image: url('../assets/background.gif'); /*fallback background*/
     background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: 100% auto;
 }
 
 section {
     display: block;
 }
 
+.small-toast {
+    display: none;
+}
+
 .small-box {
-    /* display: none; */
+    display: none;
 
     width: 60%;
     border-radius: 25px;
@@ -44,7 +48,8 @@ canvas {
 
 @media screen and (max-width:768px) {
 
-    .small-box {
+    .small-box,
+    .small-toast {
         display: block;
     }
 
@@ -57,7 +62,7 @@ canvas {
         padding: 10px 0;
     }
 
-    .box-big {
+    section {
         display: none;
     }
 }
