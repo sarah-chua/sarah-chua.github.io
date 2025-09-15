@@ -1,0 +1,31 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@property --100vw {
+  syntax: "<length>";
+  initial-value: 0px;
+  inherits: false;
+}
+
+:root {
+  --100vw: 90vw;
+  --int-width: calc(10000 * tan(atan2(var(--100vw), 10000px)));
+  --mobile-background-scale: calc(var(--int-width)/1009);
+  --desktop-background-scale: calc(var(--int-width)/1261);
+}
+
+@media only screen and (min-width: 1200px) {
+  :root {
+    --100vw: 60vw;
+  }
+}
+
+@media (min-width: 2101px) {
+  :root {
+    --desktop-background-scale: 1;
+  }
+}
+
