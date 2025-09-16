@@ -4,6 +4,11 @@ body {
   padding: 0;
 }
 
+@font-face {
+  font-family: SarahScript;
+  src: url(https:/d1wfumw2cntqgw.cloudfront.net/fonts/Simplebody-Regular.ttf);
+}
+
 @property --100vw {
   syntax: "<length>";
   initial-value: 0px;
@@ -28,4 +33,3 @@ body {
     --desktop-background-scale: 1;
   }
 }
-
