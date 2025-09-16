@@ -9,6 +9,11 @@ body {
   src: url(https:/d1wfumw2cntqgw.cloudfront.net/fonts/Simplebody-Regular.ttf);
 }
 
+@font-face {
+  font-family: SarahBlock;
+  src: url(https:/d1wfumw2cntqgw.cloudfront.net/fonts/Bigblock-Regular.ttf);
+}
+
 @property --100vw {
   syntax: "<length>";
   initial-value: 0px;

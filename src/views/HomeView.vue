@@ -16,7 +16,7 @@ function getImgUrl(path: string) {
   <div id="home-wrapper">
     <div id="home-background">
       <img id="img-background" :src="getImgUrl(`${prefix}-bg`)" alt="">
-      <div class="home-icon" id="about-icon">
+      <div class="home-icon" id="about-icon" @click="$router.push('/about')">
         <motion.img :src="getImgUrl('about')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
