@@ -5,6 +5,7 @@ const router = createRouter({
   routes: [
     { path: '/', component: () => import('../views/HomeView.vue') },
     { path: '/about', component: () => import('../views/AboutView.vue') },
+    { path: '/tech', component: () => import('../views/TechView.vue') },
   ],
 })
 

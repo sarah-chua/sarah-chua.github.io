@@ -22,7 +22,7 @@ function getImgUrl(path: string) {
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
         <div class="home-icon-label">About Me</div>
       </div>
-      <div class="home-icon" id="tech-icon">
+      <div class="home-icon" id="tech-icon" @click="$router.push('/tech')">
         <motion.img :src="getImgUrl('tech')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
