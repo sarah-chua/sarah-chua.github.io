@@ -4,11 +4,11 @@ function getImgUrl(path: string) {
 }
 </script>
 <template>
-    <div id="other-wrapper">
+    <div id="other-wrapper" class="view-wrapper">
         <h1>Other portfolio</h1>
-        <p class="subheading">On top of my software development role, I have also gained some experience in brand
+        <p class="subheading">Experience I've gained in brand
             strategy and people development.</p>
-        <div class="other-body">
+        <div class="other-body body">
             <p>I was entrusted to plan for the re-positioning of a brand, envisioning for its future direction and
                 identity.
             </p>
@@ -241,58 +241,11 @@ function getImgUrl(path: string) {
     </div>
 </template>
 <style scoped>
-img {
-    width: 100%;
-}
-
 #other-wrapper {
-    width: 90vw;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 5%;
     background-color: #FFF9CE;
 }
 
-h1 {
-    font-family: SarahBlock, sans-serif;
-    font-size: 3rem;
-    font-weight: 400;
-    margin: 0;
-    text-align: center;
-}
-
-p.subheading {
-    font-family: SarahScript, sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.2rem;
-    margin: 1rem 0px 1rem 0px;
-    text-align: center;
-}
-
-p {
-    font-family: "Inconsolata", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    font-size: 1rem;
-}
-
-.subtitle {
-    font-family: "Inconsolata", monospace;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-    font-size: 0.8rem;
-    color: grey;
-}
-
 .other-body {
-    padding: 0px 5%;
     max-width: 100%;
 }
 
@@ -314,28 +267,5 @@ p {
     justify-content: center;
     gap: 2rem;
     margin: 2rem 0px;
-}
-
-@media only screen and (min-width: 480px) {
-    h1 {
-        font-size: 5rem;
-    }
-
-    p.subheading {
-        font-size: 2.3rem;
-        line-height: 2.3rem;
-        margin: 0rem 0px 2rem 0px;
-    }
-
-    p {
-        font-size: 1.5rem;
-    }
-}
-
-@media only screen and (min-width: 1440px) {
-    #other-wrapper {
-        width: 40%;
-        padding: 5% 30%;
-    }
 }
 </style>

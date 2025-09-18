@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import ProjectCard from '@/components/ProjectCard.vue';
-import { color } from 'motion-v';
 
 const colors = ["#7E87D9", "#B8C201", "#D976C2"];
 
@@ -33,9 +32,9 @@ const projects = [
 ];
 </script>
 <template>
-    <div id="tech-wrapper">
-        <div id="tech-header">Tech projects</div>
-        <div id="tech-desc">Software and web developement projects that I have worked on</div>
+    <div id="tech-wrapper" class="view-wrapper">
+        <div id="tech-header"><h1>Tech projects</h1></div>
+        <div id="tech-desc"><p class="subheading">Software and web development projects that I have worked on</p></div>
         <ProjectCard
             v-for="(project, index) in projects"
             :key="index"
@@ -48,27 +47,14 @@ const projects = [
 </template>
 <style scoped>
 #tech-wrapper {
-    width: 90vw;
-    min-height: 90vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 50px 5% 5% 5%;
     background-color: #FFF9CE;
 }
 #tech-header {
-    font-family: SarahBlock, sans-serif;
     font-size: 3.5rem;
-    font-weight: 400;
     margin: 1rem 0px;
-    text-align: center;
 }
-#tech-desc {
-    font-family: SarahScript, sans-serif;
+#tech-desc p.subheading {
     font-size: 2rem;
-    line-height: 1.5rem;
-    text-align: center;
     margin-bottom: 1rem;
 }
 </style>
