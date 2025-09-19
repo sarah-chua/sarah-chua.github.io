@@ -1,7 +1,6 @@
 <script setup lang="ts">
-function getImgUrl(path: string) {
-    return `https:/d1wfumw2cntqgw.cloudfront.net/portfolio/${path}.png`;
-}
+import { useImgUrl } from '@/composables/useImgUrl';
+const { getImgUrl } = useImgUrl();
 </script>
 <template>
     <div id="other-wrapper" class="view-wrapper">
@@ -23,7 +22,7 @@ function getImgUrl(path: string) {
                 content pillars and a podcast to them.
             </p>
             <div>
-                <img :src="getImgUrl('interns')">
+                <img :src="getImgUrl('interns.png')">
             </div>
             <p>I guided the interns through the entire process from brainstorming, content creation, to liaising with
                 the Content Marketing and Creative Design teams.
@@ -32,11 +31,11 @@ function getImgUrl(path: string) {
             </p>
             <div class="prod-imgs">
                 <div class="prod-img">
-                    <img :src="getImgUrl('firstshoot')">
+                    <img :src="getImgUrl('firstshoot.png')">
                     <span class="subtitle">Preparation for our first video shoot</span>
                 </div>
                 <div class="prod-img">
-                    <img :src="getImgUrl('podcast')">
+                    <img :src="getImgUrl('podcast.png')">
                     <span class="subtitle">Recording our podcast episode</span>
                 </div>
             </div>

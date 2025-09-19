@@ -1,8 +1,3 @@
-<script setup lang="ts">
-function getImgUrl(path: string) {
-  return `https:/d1wfumw2cntqgw.cloudfront.net/portfolio/${path}.jpeg`;
-}
-</script>
 <template>
     <div id="contact-wrapper" class="view-wrapper">
         <h1>Let's connect!</h1>

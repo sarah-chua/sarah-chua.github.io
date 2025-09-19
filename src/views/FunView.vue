@@ -1,8 +1,3 @@
-<script setup lang="ts">
-function getImgUrl(path: string) {
-    return `https:/d1wfumw2cntqgw.cloudfront.net/portfolio/${path}.jpeg`;
-}
-</script>
 <template>
     <div id="fun-wrapper" class="view-wrapper">
         <h1>The fun stuff</h1>

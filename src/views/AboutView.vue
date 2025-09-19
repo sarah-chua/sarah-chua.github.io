@@ -1,11 +1,11 @@
 <script setup lang="ts">
-function getImgUrl(path: string) {
-  return `https:/d1wfumw2cntqgw.cloudfront.net/portfolio/${path}.jpeg`;
-}
+import { useImgUrl } from '@/composables/useImgUrl';
+
+const { getImgUrl } = useImgUrl();
 </script>
 <template>
     <div id="about-wrapper" class="view-wrapper">
-        <img id="img-profile" :src="getImgUrl('profile')" alt="">
+        <img id="img-profile" :src="getImgUrl('profile.jpeg')" alt="">
         <h1>Sarah Chua</h1>
         <p class="subheading">A software developer with a creative side.</p>
         <div class="view-body">

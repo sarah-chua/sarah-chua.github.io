@@ -2,46 +2,45 @@
 import { useWindowSize } from '@vueuse/core';
 import { motion } from 'motion-v';
 import { computed } from 'vue';
+import { useImgUrl } from '@/composables/useImgUrl';
 
 const { width } = useWindowSize();
 const prefix = computed(() => {
   return width.value < 768 ? "mobile" : "desktop";
 })
-
-function getImgUrl(path: string) {
-  return `https:/d1wfumw2cntqgw.cloudfront.net/portfolio/${path}.png`;
-}
+const { getImgUrl } = useImgUrl();
 </script>
 <template>
   <div id="home-wrapper">
+    <div class="desc">CLICK EACH ITEM TO LEARN MORE!</div>
     <div id="home-background">
-      <img id="img-background" :src="getImgUrl(`${prefix}-bg`)" alt="">
+      <img id="img-background" :src="getImgUrl(`${prefix}-bg.png`)" alt="">
       <div class="home-icon" id="about-icon" @click="$router.push('/about')">
-        <motion.img :src="getImgUrl('about')" :initial='{ transform: "scale(97%)" }'
+        <motion.img :src="getImgUrl('about.png')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
         <div class="home-icon-label">About Me</div>
       </div>
       <div class="home-icon" id="tech-icon" @click="$router.push('/tech')">
-        <motion.img :src="getImgUrl('tech')" :initial='{ transform: "scale(97%)" }'
+        <motion.img :src="getImgUrl('tech.png')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
         <div class="home-icon-label">Tech</div>
       </div>
       <div class="home-icon" id="other-icon" @click="$router.push('/other')">
-        <motion.img :src="getImgUrl('other')" :initial='{ transform: "scale(97%)" }'
+        <motion.img :src="getImgUrl('other.png')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
         <div class="home-icon-label">Other Portfolio</div>
       </div>
       <div class="home-icon" id="contact-icon" @click="$router.push('/contact')">
-        <motion.img :src="getImgUrl('contact')" :initial='{ transform: "scale(97%)" }'
+        <motion.img :src="getImgUrl('contact.png')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
         <div class="home-icon-label">Contact</div>
       </div>
       <div class="home-icon" id="hobbies-icon" @click="$router.push('/fun')">
-        <motion.img :src="getImgUrl('hobbies')" :initial='{ transform: "scale(97%)" }'
+        <motion.img :src="getImgUrl('hobbies.png')" :initial='{ transform: "scale(97%)" }'
           :animate='{ transform: "scale(100%)" }'
           :transition="{ duration: 2, repeat: Infinity, repeatType: 'reverse' }" />
         <div class="home-icon-label">Fun</div>
@@ -54,10 +53,17 @@ function getImgUrl(path: string) {
   width: 90vw;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 5%;
   background-color: #FFF9CE;
+}
+
+.desc {
+  font-family: 'Inconsolata', monospace;
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }
 
 #home-background {
@@ -71,6 +77,7 @@ function getImgUrl(path: string) {
 
 .home-icon {
   position: absolute;
+  cursor: pointer;
 
   img {
     height: 100%;
@@ -100,8 +107,6 @@ function getImgUrl(path: string) {
   .home-icon-label {
     display: block;
   }
-
-  filter: drop-shadow(0 0 0.75rem #FBB11D);
 }
 
 #about-icon {
