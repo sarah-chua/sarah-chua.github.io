@@ -5,6 +5,7 @@ const props = defineProps<{
   desc: string
   tags: string[]
   color: string
+  link: string
 }>()
 </script>
 <template>
@@ -18,10 +19,14 @@ const props = defineProps<{
         <div class="proj-desc">
             {{ desc }}
         </div>
+        <div class="read-more">
+            <button :style="{ backgroundColor: color, color: 'white' }" @click="$router.push(link)">Read more</button>
+        </div>
     </div>
 </template>
 <style scoped>
 .proj-card {
+    cursor: pointer;
     max-width: 600px;
     display: flex;
     flex-direction: column;
@@ -56,5 +61,19 @@ const props = defineProps<{
     font-family: "Inconsolata", monospace;
     font-size: 1rem;
     flex-grow: 1;
+}
+.read-more {
+    text-align: right;
+    margin-top: 1rem;
+    button {
+        border: none;
+        border-radius: 5px;
+        padding: 0.5rem 1rem;
+        font-family: "Inconsolata", monospace;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 }
 </style>
