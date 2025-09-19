@@ -40,6 +40,7 @@ body {
 }
 
 a {
+  font-family: 'Inconsolata', monospace;
   color: #7E87D9;
 }
 
@@ -73,7 +74,7 @@ p.subheading {
     text-align: center;
 }
 
-p {
+p, ul, li {
     font-family: "Inconsolata", monospace;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -105,7 +106,7 @@ p {
         line-height: 2.3rem;
         margin: 0rem 0px 2rem 0px;
     }
-    p {
+    p, ul, li  {
         font-size: 1.5rem;
     }
 }
