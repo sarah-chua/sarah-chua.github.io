@@ -7,28 +7,33 @@ const projects = [
     {
         title: "Digital Concierge",
         desc: "A chatbot to assist users with common questions and tasks. Integrated with Trello API to automate internal follow-up tasks.",
-        tags: ["AWS CDK", "AWS Lex", "Lambda", "Bedrock", "Trello API"]
+        tags: ["AWS CDK", "AWS Lex", "Lambda", "Bedrock", "Typescript", "Trello API"],
+        link: "/tech/digital-concierge"
     },
     {
         title: "Loti Christmas Card",
         desc: "Customised e-card for users to send Christmas greetings to their loved ones.",
-        tags: ["Vue"]
-    },
-    {
-        title: "Whatsapp Business API",
-        desc: "An implementation of the WhatsApp Business API to automate the sending of audio resources to 500 seniors.",
-        tags: ["AWS CDK", "Lambda"]
+        tags: ["Vue", "AWS S3"],
+        link: "/tech/loti-christmas-card"
     },
     {
         title: "Animated Articles",
         desc: "Cross-functional implementation of articles with animation to improve engagement.",
-        tags: ["Wordpress", "GSAP", "PixiJS"]
+        tags: ["Wordpress", "GSAP", "PixiJS"],
+        link: "/tech/animated-articles"
     },
     {
         title: "Conference Registration Web App",
         desc: "A web application to register conference attendees and display real-time statistics for crowd management.",
-        tags: ["AWS Amplify", "DynamoDB", "Vue"]
-    }
+        tags: ["AWS Amplify", "DynamoDB", "Vue"],
+        link: "/tech/conference-registration-web-app"
+    },
+    // {
+    //     title: "Whatsapp Business API",
+    //     desc: "An implementation of the WhatsApp Business API to automate the sending of audio resources to 500 seniors.",
+    //     tags: ["AWS CDK", "Lambda"],
+    //     link: "/tech/whatsapp-business-api"
+    // }
 ];
 </script>
 <template>
@@ -42,12 +47,15 @@ const projects = [
             :desc="project.desc"
             :tags="project.tags"
             :color="colors[index % colors.length]"
+            :link="project.link"
+            @click="$router.push(project.link)"
         />
     </div>
 </template>
 <style scoped>
 #tech-wrapper {
     background-color: #FFF9CE;
+    padding-bottom: 70px;
 }
 #tech-header {
     font-size: 3.5rem;
