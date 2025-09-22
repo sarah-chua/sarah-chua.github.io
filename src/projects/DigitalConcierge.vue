@@ -2,7 +2,7 @@
 import ProjectPage from '@/components/ProjectPage.vue';
 </script>
 <template>
-    <ProjectPage :title="'Digital Concierge'" :img-url="'https:/d1wfumw2cntqgw.cloudfront.net/portfolio/digital-concierge.png'" :live-url="'https://odb.sg'">
+    <ProjectPage title="Digital Concierge" img-url="https:/d1wfumw2cntqgw.cloudfront.net/portfolio/digital-concierge.png" live-url="https://odb.sg">
         <template #proj-info>
             <p>In hopes to automate and reduce the labour of our customer-facing teams, we developed a Digital Concierge to answer some FAQs and automate collection of information for follow-up tasks.</p>
             <p>Working closely with the customer-facing teams, we identified common queries and tasks that could be streamlined. For its first iteration, the Concierge was configured for the following purposes:

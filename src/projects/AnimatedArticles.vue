@@ -5,7 +5,7 @@ import { useImgUrl } from '@/composables/useImgUrl';
 const { getImgUrl } = useImgUrl();
 </script>
 <template>
-    <ProjectPage :title="'Animated Articles'">
+    <ProjectPage title="Animated Articles">
         <template #proj-info>
             <p>In order to keep readers engaged on longer articles, the team looked into ways to incorporate animations into the design of our articles.</p>
             <p>With every article assigned to me, I brainstormed with the assigned designer possible animations that would add meaning and life to the content.</p>

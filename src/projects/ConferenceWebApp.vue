@@ -2,7 +2,7 @@
 import ProjectPage from '@/components/ProjectPage.vue';
 </script>
 <template>
-    <ProjectPage :title="'Conference Registration Web App'" :imgUrl="'https:/d1wfumw2cntqgw.cloudfront.net/portfolio/conference.png'">
+    <ProjectPage title="Conference Registration Web App" imgUrl="https:/d1wfumw2cntqgw.cloudfront.net/portfolio/conference.png">
         <template #proj-info>
             <p>To facilitate participant management for an annual conference, my team was tasked to build a solution for quick registration on the day of the conference.</p>
             <p>Using AWS Amplify, I built a web application with Vue that allowed conference attendees to be quickly marked as present through the scanning of QR codes sent via email when they signed up.</p>
