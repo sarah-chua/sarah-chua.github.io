@@ -78,10 +78,11 @@ const { getImgUrl } = useImgUrl();
 .home-icon {
   position: absolute;
   cursor: pointer;
+}
 
-  img {
-    height: 100%;
-  }
+.home-icon img {
+  height: 100%;
+  width: auto;
 }
 
 .home-icon-label {
@@ -103,10 +104,8 @@ const { getImgUrl } = useImgUrl();
   line-height: 1.5rem;
 }
 
-.home-icon:hover {
-  .home-icon-label {
+.home-icon:hover .home-icon-label {
     display: block;
-  }
 }
 
 #about-icon {

@@ -254,9 +254,10 @@ const { getImgUrl } = useImgUrl();
     justify-content: center;
     gap: 1rem;
     margin: 2rem 0px;
-    .prod-img {
-        width: 48%;
-    }
+}
+
+.prod-imgs .prod-img {
+    width: 48%;
 }
 
 .instagram-posts {

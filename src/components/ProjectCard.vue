@@ -65,15 +65,17 @@ const props = defineProps<{
 .read-more {
     text-align: right;
     margin-top: 1rem;
-    button {
-        border: none;
-        border-radius: 5px;
-        padding: 0.5rem 1rem;
-        font-family: "Inconsolata", monospace;
-        font-size: 1rem;
-        font-weight: 600;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+}
+
+.read-more button {
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-family: "Inconsolata", monospace;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
 }
 </style>
