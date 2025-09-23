@@ -2,7 +2,7 @@
 import ProjectPage from '@/components/ProjectPage.vue';
 </script>
 <template>
-    <ProjectPage title="Loti Christmas Card" img-url="https:/d1wfumw2cntqgw.cloudfront.net/portfolio/loti-christmas.png" live-url="https://christmas2023.odb.sg">
+    <ProjectPage title="Loti Christmas Card" img-url="https://d1wfumw2cntqgw.cloudfront.net/portfolio/loti-christmas.png" live-url="https://christmas2023.odb.sg">
         <template #proj-info>
             <p>Inspired by Zendesk's Thank You Machine, I pitched the idea of a customisable e-card for our 2023 Christmas campaign.</p>
             <p>With the help of the Creative Design team and Content Marketing team, we launched this microsite to allow users to create their own e-cards to send to their friends and family.</p>
